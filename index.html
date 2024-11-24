@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slide-down {
+      animation: slide-down 0.3s ease-in-out;
+    }
+
+    .fade-in {
+      animation: fade-in 0.5s ease-in-out;
+    }
+
+    @keyframes slide-down {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-cyan-400 to-purple-400 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class=" text-3xl text-purple-500 font-bold">Md Mehedi Hasan</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#home" class="text-white hover:text-gray-300 transition duration-300">Home</a>
+          <a href="#about" class="text-white hover:text-gray-300 transition duration-300">About</a>
+          <a href="#services" class="text-white hover:text-gray-300 transition duration-300">Services</a>
+          <a href="#contact" class="text-white hover:text-gray-300 transition duration-300">Contact</a>
+          <button class="bg-yellow-400 text-gray-800 px-4 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">
+            Sign Up
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-blue-600 md:hidden slide-down">
+      <a href="#home" class="block text-white py-2 px-4 hover:bg-blue-700 transition">Home</a>
+      <a href="#about" class="block text-white py-2 px-4 hover:bg-blue-700 transition">About</a>
+      <a href="#services" class="block text-white py-2 px-4 hover:bg-blue-700 transition">Services</a>
+      <a href="#contact" class="block text-white py-2 px-4 hover:bg-blue-700 transition">Contact</a>
+      <button class="w-full text-center bg-yellow-400 text-gray-800 py-2 px-4 hover:bg-yellow-500 transition duration-300 mt-2">
+        Sign Up
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <!-- <div class="text-center mt-20">
+    <h1 class="text-4xl font-bold text-gray-800">Welcome to My Website</h1>
+    <p class="mt-4 text-gray-600">This is a responsive navbar with animations and interactivity.</p>
+  </div> -->
+
+  <section class="relative h-screen flex items-center justify-center bg-gray-900 text-white">
+    <video
+    id="background-video"
+    class="absolute top-0 left-0 w-full h-full object-cover z-0"
+    autoplay
+    muted
+    loop
+  >
+    <source src="./3191572-uhd_3840_2160_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center">
+    <h1 class="lg:text-7xl md:text-6xl text-4xl text-white font-bold">Welcome to My Page</h1>
+    <p class="mt-2">Experience the beauty of motion and calmness. Lorem ipsum dolor sit amet.</p>
+    <button
+      id="toggle-play"
+      class="mt-5 px-6 py-2 bg-blue-500 bg-transparent border-2 hover:text-cyan-400 border-cyan-500 duration-300 text-white font-semibold rounded-lg"
+    >
+      Pause Video
+    </button>
+  </div>
+  </section>
+
+  <script src="./app.js">
+  
+  </script>
+</body>
+</html>
